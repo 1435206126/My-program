@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 320px; padding: 15px; font-family: 'Microsoft YaHei', sans-serif; }
+    h3 { margin-top: 0; color: #333; text-align: center;}
+    .btn-group { display: flex; flex-direction: column; gap: 10px; }
+    input[type="file"] { display: none; }
+    .custom-file-upload {
+      border: 2px dashed #ccc; display: block; padding: 20px;
+      text-align: center; cursor: pointer; color: #666; border-radius: 5px;
+    }
+    .custom-file-upload:hover { border-color: #07c160; color: #07c160; }
+    #status { margin-top: 10px; font-size: 12px; color: #666; min-height: 20px;}
+    .action-btn {
+      background-color: #07c160; color: white; border: none; padding: 10px;
+      border-radius: 4px; cursor: pointer; font-size: 14px; display: none;
+    }
+    .action-btn:hover { background-color: #06ad56; }
+  </style>
+</head>
+<body>
+  <h3>文章图片自动排版</h3>
+  
+  <div class="btn-group">
+    <label for="file-input" class="custom-file-upload">
+      点击选择图片/TXT文件 (支持多选)
+    </label>
+    <input id="file-input" type="file" multiple accept="image/*,.txt" />
+    
+    <div id="status">等待选择文件...</div>
+    <button id="insert-btn" class="action-btn">一键插入到编辑器</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

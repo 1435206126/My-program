@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "公众号文章自动排版助手",
+  "version": "2.0",
+  "description": "自动上传图片到公众号后台并按格式插入",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "cookies" 
+  ],
+  "host_permissions": [
+    "https://mp.weixin.qq.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
